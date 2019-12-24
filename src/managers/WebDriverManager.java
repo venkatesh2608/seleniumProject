@@ -40,13 +40,15 @@ public class WebDriverManager {
 
 	private WebDriver createLocalDriver() {
         switch (driverType) {	    
-        case FIREFOX : driver = new FirefoxDriver();
+        case FIREFOX : 
+        	driver = new FirefoxDriver();
 	    	break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
         	driver = new ChromeDriver();
     		break;
-        case INTERNETEXPLORER : driver = new InternetExplorerDriver();
+        case INTERNETEXPLORER : 
+        	driver = new InternetExplorerDriver();
     		break;
         }
 
