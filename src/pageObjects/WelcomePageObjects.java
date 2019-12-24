@@ -15,11 +15,11 @@ public class WelcomePageObjects extends PageBase {
 	}
 	
 	@FindBy(xpath="//input[@name='userName']")
-	WebElement userName;
+	public WebElement userName;
 	
 	@FindBy(xpath="//input[@name='password']")
-	WebElement password;
+	public WebElement password;
 	
 	@FindBy(xpath="//input[@name='login']")
-	WebElement signIn;
+	public WebElement signIn;
 }

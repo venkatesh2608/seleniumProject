@@ -2,6 +2,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 
+import bizLib.WelcomePage;
 import managers.WebDriverManager;
 
 import org.testng.annotations.BeforeMethod;
@@ -11,17 +12,21 @@ import org.testng.annotations.AfterMethod;
 public class BasicTestCase {
 	public WebDriver driver = null;
 	WebDriverManager wdm = null;
+	WelcomePage welcomePage = null;
 
 	@BeforeMethod
 	  public void beforeMethod() {
 		wdm = new WebDriverManager();
 		driver = wdm.getDriver();
 		wdm.launchApplicationUrl();
+		welcomePage = new WelcomePage(driver);
 	  }
 	
 	@Test
 	  public void f() {
-		driver.navigate().to("https://www.google.com");
+		welcomePage.enterUserName("Venkatesh");
+		welcomePage.enterPassword("PASS");
+		welcomePage.clickSignIn();
 		
 		
 	  }
