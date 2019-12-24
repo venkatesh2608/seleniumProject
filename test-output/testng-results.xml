@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9413" started-at="2019-12-24T14:01:57 IST" finished-at="2019-12-24T14:02:06 IST">
+  <suite name="Suite" duration-ms="8833" started-at="2019-12-24T14:08:13 IST" finished-at="2019-12-24T14:08:22 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9413" started-at="2019-12-24T14:01:57 IST" finished-at="2019-12-24T14:02:06 IST">
+    <test name="Test" duration-ms="8833" started-at="2019-12-24T14:08:13 IST" finished-at="2019-12-24T14:08:22 IST">
       <class name="testCases.BasicTestCase">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="4735" started-at="2019-12-24T14:01:57 IST" finished-at="2019-12-24T14:02:02 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="4530" started-at="2019-12-24T14:08:13 IST" finished-at="2019-12-24T14:08:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1721" started-at="2019-12-24T14:02:02 IST" finished-at="2019-12-24T14:02:03 IST">
+        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1171" started-at="2019-12-24T14:08:18 IST" finished-at="2019-12-24T14:08:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="2880" started-at="2019-12-24T14:02:03 IST" finished-at="2019-12-24T14:02:06 IST">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="3073" started-at="2019-12-24T14:08:19 IST" finished-at="2019-12-24T14:08:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testCases.BasicTestCase -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
