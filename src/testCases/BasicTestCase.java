@@ -22,7 +22,7 @@ public class BasicTestCase {
 	@Test
 	  public void f() {
 		driver.navigate().to("https://www.google.com");
-		//test
+		
 		
 	  }
 	
