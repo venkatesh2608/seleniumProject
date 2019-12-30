@@ -1,22 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Opening Browser]]>
+    </line>
+    <line>
+      <![CDATA[Test Method Exectuion
+]]>
+    </line>
+    <line>
+      <![CDATA[Entering User Name]]>
+    </line>
+    <line>
+      <![CDATA[Entering Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on Sign In]]>
+    </line>
+    <line>
+      <![CDATA[Closing Browser]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9862" started-at="2019-12-24T19:48:15 IST" finished-at="2019-12-24T19:48:25 IST">
+  <suite name="Default suite" duration-ms="9834" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:11 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9862" started-at="2019-12-24T19:48:15 IST" finished-at="2019-12-24T19:48:25 IST">
+    <test name="Default test" duration-ms="9834" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:11 IST">
       <class name="testCases.BasicTestCase">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="5257" started-at="2019-12-24T19:48:15 IST" finished-at="2019-12-24T19:48:20 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="4988" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:06 IST">
           <reporter-output>
+            <line>
+              <![CDATA[Opening Browser]]>
+            </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1612" started-at="2019-12-24T19:48:20 IST" finished-at="2019-12-24T19:48:22 IST">
+        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1769" started-at="2019-12-26T16:52:06 IST" finished-at="2019-12-26T16:52:08 IST">
           <reporter-output>
+            <line>
+              <![CDATA[Test Method Exectuion
+]]>
+            </line>
+            <line>
+              <![CDATA[Entering User Name]]>
+            </line>
+            <line>
+              <![CDATA[Entering Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on Sign In]]>
+            </line>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="2926" started-at="2019-12-24T19:48:22 IST" finished-at="2019-12-24T19:48:25 IST">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="3002" started-at="2019-12-26T16:52:08 IST" finished-at="2019-12-26T16:52:11 IST">
           <reporter-output>
+            <line>
+              <![CDATA[Closing Browser]]>
+            </line>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testCases.BasicTestCase -->

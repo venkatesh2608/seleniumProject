@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Reporter;
+
 import enums.DriverType;
 import enums.EnvironmentType;
 
@@ -25,6 +27,7 @@ public class WebDriverManager {
 	}
 
 	private WebDriver createDriver() {
+		Reporter.log("Opening Browser");
 		   switch (environmentType) {	    
 	        case LOCAL : driver = createLocalDriver();
 	        	break;
@@ -62,6 +65,7 @@ public class WebDriverManager {
 	}
 	
 	public void closeDriver() {
+		Reporter.log("Closing Browser");
 		driver.close();
 		driver.quit();
 	}
