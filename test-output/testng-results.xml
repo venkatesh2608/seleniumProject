@@ -21,19 +21,19 @@
       <![CDATA[Closing Browser]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9834" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:11 IST">
+  <suite name="Default suite" duration-ms="8080" started-at="2019-12-31T16:34:26 IST" finished-at="2019-12-31T16:34:34 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9834" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:11 IST">
+    <test name="Default test" duration-ms="8080" started-at="2019-12-31T16:34:26 IST" finished-at="2019-12-31T16:34:34 IST">
       <class name="testCases.BasicTestCase">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="4988" started-at="2019-12-26T16:52:01 IST" finished-at="2019-12-26T16:52:06 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="beforeMethod" is-config="true" duration-ms="5497" started-at="2019-12-31T16:34:26 IST" finished-at="2019-12-31T16:34:31 IST">
           <reporter-output>
             <line>
               <![CDATA[Opening Browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1769" started-at="2019-12-26T16:52:06 IST" finished-at="2019-12-26T16:52:08 IST">
+        <test-method status="PASS" signature="f()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="f" duration-ms="1546" started-at="2019-12-31T16:34:31 IST" finished-at="2019-12-31T16:34:33 IST">
           <reporter-output>
             <line>
               <![CDATA[Test Method Exectuion
@@ -50,7 +50,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="3002" started-at="2019-12-26T16:52:08 IST" finished-at="2019-12-26T16:52:11 IST">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.BasicTestCase@63753b6d]" name="afterMethod" is-config="true" duration-ms="919" started-at="2019-12-31T16:34:33 IST" finished-at="2019-12-31T16:34:34 IST">
           <reporter-output>
             <line>
               <![CDATA[Closing Browser]]>
