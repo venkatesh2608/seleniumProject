@@ -12,14 +12,13 @@ import org.testng.annotations.AfterMethod;
 
 public class BasicTestCase {
 	public WebDriver driver = null;
-	WebDriverManager wdm = null;
 	WelcomePage welcomePage = null;
 
 	@BeforeMethod
 	  public void beforeMethod() {
-		wdm = new WebDriverManager();
-		driver = wdm.getDriver();
-		wdm.launchApplicationUrl();
+		
+		driver = WebDriverManager.getInstance().getDriver();
+		WebDriverManager.getInstance().launchApplicationUrl();
 		welcomePage = new WelcomePage(driver);
 	  }
 	
@@ -35,6 +34,6 @@ public class BasicTestCase {
 	
 	@AfterMethod
 	  public void afterMethod() {
-		wdm.closeDriver();
+		WebDriverManager.getInstance().closeDriver();
 	  }  
 }

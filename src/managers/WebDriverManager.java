@@ -12,14 +12,29 @@ import enums.EnvironmentType;
 
 public class WebDriverManager {
 	private WebDriver driver;
+	private static WebDriverManager instance = null;
 	private static DriverType driverType;
 	private static EnvironmentType environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 
-	public WebDriverManager() {
+	private WebDriverManager() {
 		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
 	}
+	
+	
+	/**
+     * getInstance method to retrieve active driver instance
+     *
+     * @return WebDriverManager
+     */
+    public static WebDriverManager getInstance() {
+        if ( instance == null ) {
+            instance = new WebDriverManager();
+        }
+        return instance;
+    }
+
 
 	public WebDriver getDriver() {
 		if(driver == null) driver = createDriver();
