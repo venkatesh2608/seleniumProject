@@ -7,22 +7,22 @@ import org.openqa.selenium.support.PageFactory;
 
 import managers.WebDriverManager;
 
-public class WelcomePageObjects  {
-	private static WelcomePageObjects instance = null;
+public class HomePageObjects {
+	private static HomePageObjects instance = null;
 	private static WebDriver driver = WebDriverManager.getInstance().getDriver();
 	
 	/*
 	 * This Class is a singleton
 	 * 
 	 */
-	private WelcomePageObjects(WebDriver driver) {
-		WelcomePageObjects.driver = driver;
+	private HomePageObjects(WebDriver driver) {
+		 HomePageObjects.driver = driver;
 		 PageFactory.initElements(driver, this);
 	}
 	
-	public static WelcomePageObjects getInstatnce() {
+	public static HomePageObjects getInstatnce() {
 		if(instance == null) {
-			instance = new WelcomePageObjects(driver);
+			instance = new HomePageObjects(driver);
 		}
 		return instance;
 	}
@@ -30,9 +30,5 @@ public class WelcomePageObjects  {
 	@FindBy(xpath="//input[@name='userName']")
 	public WebElement userName;
 	
-	@FindBy(xpath="//input[@name='password']")
-	public WebElement password;
 	
-	@FindBy(xpath="//input[@name='login']")
-	public WebElement signIn;
 }

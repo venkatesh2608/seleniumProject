@@ -24,7 +24,7 @@ public class WebDriverManager {
 	
 	
 	/**
-     * getInstance method to retrieve active driver instance
+     * getInstance method to retrieve active webdrivermanager instance
      *
      * @return WebDriverManager
      */
@@ -35,12 +35,21 @@ public class WebDriverManager {
         return instance;
     }
 
-
+    /**
+     * getDriver method to retrieve active driver if exists or create driver if not exists 
+     * 
+     * @return WebDriver
+     */
 	public WebDriver getDriver() {
 		if(driver == null) driver = createDriver();
 		return driver;
 	}
 
+	/**
+	 * 
+	 * 
+	 * @return
+	 */
 	private WebDriver createDriver() {
 		Reporter.log("Opening Browser");
 		   switch (environmentType) {	    
@@ -56,6 +65,7 @@ public class WebDriverManager {
 		throw new RuntimeException("RemoteWebDriver is not yet implemented");
 	}
 
+	
 	private WebDriver createLocalDriver() {
         switch (driverType) {	    
         case FIREFOX : 
@@ -75,14 +85,21 @@ public class WebDriverManager {
 		return driver;
 	}	
 
+	/**
+	 * launchApplicationUrl method will navigate driver to desired URL
+	 */
 	public void launchApplicationUrl() {
-		driver.navigate().to(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		
+		getDriver().navigate().to(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
+	/**
+	 * closeDriver will close and quit existing driver
+	 */
 	public void closeDriver() {
 		Reporter.log("Closing Browser");
-		driver.close();
-		driver.quit();
+		getDriver().close();
+		getDriver().quit();
 	}
 
 }
