@@ -9,13 +9,16 @@ import org.testng.Reporter;
 
 import enums.DriverType;
 import enums.EnvironmentType;
+import pageObjects.HomePageObjects;
+import pageObjects.WelcomePageObjects;
 
 public class WebDriverManager {
-	private WebDriver driver;
+	private static WebDriver driver = null;
 	private static WebDriverManager instance = null;
 	private static DriverType driverType;
 	private static EnvironmentType environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
+
 
 	private WebDriverManager() {
 		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
@@ -24,7 +27,7 @@ public class WebDriverManager {
 	
 	
 	/**
-     * getInstance method to retrieve active webdrivermanager instance
+     * getInstance method to retrieve active WebDriverManager instance
      *
      * @return WebDriverManager
      */
@@ -41,7 +44,9 @@ public class WebDriverManager {
      * @return WebDriver
      */
 	public WebDriver getDriver() {
-		if(driver == null) driver = createDriver();
+		if(driver == null) {
+			driver = createDriver();
+		}
 		return driver;
 	}
 
@@ -50,7 +55,7 @@ public class WebDriverManager {
 	 * 
 	 * @return
 	 */
-	private WebDriver createDriver() {
+	public WebDriver createDriver() {
 		Reporter.log("Opening Browser");
 		   switch (environmentType) {	    
 	        case LOCAL : driver = createLocalDriver();
@@ -65,7 +70,6 @@ public class WebDriverManager {
 		throw new RuntimeException("RemoteWebDriver is not yet implemented");
 	}
 
-	
 	private WebDriver createLocalDriver() {
         switch (driverType) {	    
         case FIREFOX : 
@@ -96,10 +100,26 @@ public class WebDriverManager {
 	/**
 	 * closeDriver will close and quit existing driver
 	 */
-	public void closeDriver() {
+	private void closeDriver() {
 		Reporter.log("Closing Browser");
-		getDriver().close();
-		getDriver().quit();
+		getDriver().close();		
 	}
+	
+	private void destroyDmObject() {
+		WebDriverManager.instance=null;
+	}
+	
+	private void clearPageBojects() {
+		WelcomePageObjects.instance = null;
+		HomePageObjects.instance = null;
+	}
+	
+	public void cleanUp() {
+		closeDriver();
+		destroyDmObject();
+		clearPageBojects();
+		
+	}
+	
 
 }

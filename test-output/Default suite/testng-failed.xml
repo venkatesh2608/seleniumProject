@@ -5,9 +5,10 @@
     <classes>
       <class name="testCases.BasicTestCase">
         <methods>
+          <include name="f1"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="f2"/>
         </methods>
       </class> <!-- testCases.BasicTestCase -->
     </classes>

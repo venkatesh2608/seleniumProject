@@ -7,32 +7,35 @@ import org.openqa.selenium.support.PageFactory;
 
 import managers.WebDriverManager;
 
-public class WelcomePageObjects  {
-	private static WelcomePageObjects instance = null;
-	private static WebDriver driver = WebDriverManager.getInstance().getDriver();
-	
+public class WelcomePageObjects {
+	public static WelcomePageObjects instance = null;
+	private static WebDriver driver = null;
+
 	/*
 	 * This Class is a singleton
 	 * 
 	 */
+
 	private WelcomePageObjects(WebDriver driver) {
 		WelcomePageObjects.driver = driver;
-		 PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);
 	}
-	
+
 	public static WelcomePageObjects getInstatnce() {
-		if(instance == null) {
+		if (instance == null) {
+			driver = WebDriverManager.getInstance().getDriver();
 			instance = new WelcomePageObjects(driver);
+
 		}
 		return instance;
 	}
-	
-	@FindBy(xpath="//input[@name='userName']")
+
+	@FindBy(xpath = "//input[@name='userName']")
 	public WebElement userName;
-	
-	@FindBy(xpath="//input[@name='password']")
+
+	@FindBy(xpath = "//input[@name='password']")
 	public WebElement password;
-	
-	@FindBy(xpath="//input[@name='login']")
+
+	@FindBy(xpath = "//input[@name='login']")
 	public WebElement signIn;
 }

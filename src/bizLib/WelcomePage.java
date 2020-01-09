@@ -4,7 +4,7 @@ import org.testng.Reporter;
 import pageObjects.WelcomePageObjects;
 
 public class WelcomePage {
-private static WelcomePage instance = null;
+public static WelcomePage instance = null;
 	
 	private WelcomePage() {
 		
