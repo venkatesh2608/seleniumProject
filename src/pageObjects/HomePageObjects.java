@@ -50,5 +50,35 @@ public class HomePageObjects {
 	@FindBy(xpath = "//input[@name='tripType']")
 	public List<WebElement> radioButton;
 	
+	@FindBy(xpath="//select[@name='passCount']")
+	public WebElement passengers;
+	
+	@FindBy(xpath="//select[@name='fromPort']")
+	public WebElement departingFrom;
+	
+	@FindBy(xpath="//select[@name='fromMonth']")
+	public WebElement onMonth;
+	
+	@FindBy(xpath="//select[@name='fromDay']")
+	public WebElement onDay;
+	
+	@FindBy(xpath="//select[@name='toPort']")
+	public WebElement arrivingIn;
+	
+	@FindBy(xpath="//select[@name='toMonth']")
+	public WebElement returningMonth;
+	
+	@FindBy(xpath="//select[@name='toDay']")
+	public WebElement returningDay;
+	
+	@FindBy(xpath="//input[@name='servClass' and @type='radio']")
+	public List<WebElement> serviceClassRadio;
+	
+	@FindBy(xpath="//select[@name='airline']")
+	public WebElement airline;
+	
+	@FindBy(xpath="//input[@name='findFlights']")
+	public WebElement continueButton;
+	
 	
 }
